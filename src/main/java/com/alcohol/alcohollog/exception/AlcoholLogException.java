@@ -9,6 +9,13 @@ public class AlcoholLogException extends RuntimeException{
     private final ErrorCode errorCode;
     private final String message;
 
+<<<<<<< Updated upstream
+=======
+    public AlcoholLogException(ErrorCode errorCode){
+        this.errorCode = errorCode;
+        this.message = null;
+    }
+>>>>>>> Stashed changes
     @Override
     public String getMessage() {
         if (message == null) {
