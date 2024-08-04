@@ -1,12 +1,8 @@
 package com.alcohol.alcohollog.controller;
 
-<<<<<<< Updated upstream
-import com.alcohol.alcohollog.dto.request.SignUpRequest;
-=======
 import com.alcohol.alcohollog.dto.request.LoginRequest;
 import com.alcohol.alcohollog.dto.request.SignUpRequest;
 import com.alcohol.alcohollog.dto.response.LoginResponse;
->>>>>>> Stashed changes
 import com.alcohol.alcohollog.dto.response.Response;
 import com.alcohol.alcohollog.dto.response.SignUpResponse;
 import com.alcohol.alcohollog.service.UserService;
@@ -37,8 +33,6 @@ public class UserController {
     public Response<SignUpResponse> signUp(@RequestBody SignUpRequest request){
         return Response.success(userService.signup(request));
     }
-<<<<<<< Updated upstream
-=======
 
     /**
      * 로그인 API 엔드포인트
@@ -53,5 +47,4 @@ public class UserController {
         String token = userService.login(request);
         return Response.success(new LoginResponse(token));
     }
->>>>>>> Stashed changes
 }

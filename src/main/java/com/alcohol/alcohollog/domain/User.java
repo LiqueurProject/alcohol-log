@@ -3,11 +3,6 @@ package com.alcohol.alcohollog.domain;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-<<<<<<< Updated upstream
-
-import java.sql.Timestamp;
-import java.time.Instant;
-=======
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,17 +11,14 @@ import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.Collection;
 import java.util.List;
->>>>>>> Stashed changes
+
 
 @Getter
 @RequiredArgsConstructor
 @Entity
 @Table(name = "users")
-<<<<<<< Updated upstream
-public class User {
-=======
 public class User implements UserDetails {
->>>>>>> Stashed changes
+    // UUID 바꾸기
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -49,12 +41,9 @@ public class User implements UserDetails {
     // 사용자 수정 시간
     private Timestamp updatedAt;
 
-<<<<<<< Updated upstream
-=======
     // 사용자 삭제 시간
     private Timestamp removedAt;
 
->>>>>>> Stashed changes
     // 사용자 등록 타입 (일반 / 소셜)
     @Enumerated(EnumType.STRING)
     private RegisterType registerType;
@@ -97,8 +86,6 @@ public class User implements UserDetails {
     public static User of(String email, String password, String nickname, RegisterType registerType){
         return new User(email, password, nickname, registerType);
     }
-<<<<<<< Updated upstream
-=======
 
 
     @Override
@@ -130,5 +117,4 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return removedAt == null;
     }
->>>>>>> Stashed changes
 }
