@@ -20,8 +20,9 @@ import java.util.List;
 public class User implements UserDetails {
     // UUID 바꾸기
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+
+    private String id;
 
     // 사용자 이메일
     private String email;
